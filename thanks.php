@@ -1,7 +1,7 @@
 <?php 
 $nickname=$_POST["nickname"];
 $email=$_POST["email"];
-$content$_POST=["content"]
+$content=$_POST["content"]
  ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -14,7 +14,7 @@ $content$_POST=["content"]
 <div>
 	<h3>お問い合わせ詳細内容</h3>
 	<p>ニックネーム：<?php echo $nickname; ?></p>
-	<p>メールアドレス：<?php echo $emaile; ?></p>
+	<p>メールアドレス：<?php echo $email; ?></p>
 	<p>お問い合わせ内容：<?php echo $content; ?></p>
 </div>
 </body>
