@@ -35,6 +35,7 @@
 		<input type="hidden" name="content" value="<?php echo $content; ?>">
 
 		<input type="button" value="戻る" onclick="history.back()">
+		<!-- ↓コロン構文 -->
 		<?php if($nickname!=""&&$email!=""&&$content!=""):?>
 		<input type="submit" value="OK">
 		<?php endif; ?>
