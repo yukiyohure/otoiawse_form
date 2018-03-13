@@ -1,21 +1,21 @@
 <?php
 	$nickname=$_POST["nickname"];
 	if($nickname==""){
-		$nickname_result="ニックネームが入力されていません。<br>";
+		$nickname_result="ニックネームが入力されていません。";
 	}else{
-		$nickname_result="ようこそ、".$nickname."様。<br>";
+		$nickname_result="ようこそ、".$nickname."様。";
 	}
 	$email=$_POST["email"];
 	if($email==""){
-		$email_result="メールアドレスが入力されていません。<br>";
+		$email_result="メールアドレスが入力されていません。";
 	}else{
-		$email_result="メールアドレス：".$email."<br>";
+		$email_result="メールアドレス：".$email;
 	}
 	$content=$_POST["content"];
 	if($content==""){
-		$content_result="お問い合わせ内容が入力されていません。<br>";
+		$content_result="お問い合わせ内容が入力されていません。";
 	}else{
-		$content_result="お問い合わせ内容：".$content."<br>";
+		$content_result="お問い合わせ内容：".$content;
 	}
 	?>
 <!DOCTYPE html>
@@ -26,9 +26,9 @@
 </head>
 <body>
 	<h1>入力内容確認</h1>
-	<p><?php echo $nickname_result ?></p>
-	<p><?php echo $email_result ?></p>
-	<p><?php echo $content_result ?></p>
+	<p><?php echo htmlspecialchars($nickname_result); ?></p>
+	<p><?php echo htmlspecialchars($email_result); ?></p>
+	<p><?php echo htmlspecialchars($content_result); ?></p>
 	<form method="POST" action="thanks.php">
 		<input type="hidden" name="nickname" value="<?php echo $nickname; ?>">
 		<input type="hidden" name="email" value="<?php echo $email; ?>">
